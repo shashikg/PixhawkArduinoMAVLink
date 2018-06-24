@@ -14,8 +14,14 @@ void setup(){
 
 void loop(){
   float xacc, yacc, zacc;
+
+  // ReadAcceleration function returns error code
+  // 0 >> means succes
+  // 1 >> error in parsing recieved data from Pixhawk
+  // 2 >> error in reading the Pixhawk serial port
   imu.ReadAcceleration(&xacc, &yacc, &zacc);
+  
   Serial.println("X: "); Serial.print(xacc);
-  Serial.print("Y: "); Serial.print(yacc);
-  Serial.print("Z: "); Serial.print(zacc);
+  Serial.print("  Y: "); Serial.print(yacc);
+  Serial.print("  Z: "); Serial.print(zacc);
 }

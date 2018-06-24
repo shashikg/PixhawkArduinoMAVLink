@@ -1,7 +1,7 @@
 /*
   PixhawkArduinoMAVLink.cpp - Library for using Arduino to recieve Pixhawk sensors data.
   Created by Shashi Kant, June 23, 2018.
-  Using MAVLink C headers files generated from the ardupilotmega.xml with the help mavgenerator.
+  Using MAVLink C headers files generated from the ardupilotmega.xml with the help of mavgenerator.
 */
 
 #include "ardupilotmega/mavlink.h"
@@ -19,7 +19,7 @@ bool PixhawkArduinoMAVLink::begin(){
   return _MAVSerial;
 }
 
-void PixhawkArduinoMAVLink::ReadAcceleration(float *xacc, float *yacc, float *zacc, bool *success){
+int PixhawkArduinoMAVLink::ReadAcceleration(float *xacc, float *yacc, float *zacc){
   mavlink_message_t msg;
   mavlink_status_t status;
 
@@ -34,8 +34,13 @@ void PixhawkArduinoMAVLink::ReadAcceleration(float *xacc, float *yacc, float *za
           xacc = imu.xacc;
           yacc = imu.yacc;
           zacc = imu.zacc;
+          return 0;
         }break;
       }
+    }else{
+      return 1;
     }
+  }else{
+    return 2;
   }
 }
