@@ -7,7 +7,8 @@
 #ifndef PixhawkArduinoMAVLink_h
 #define PixhawkArduinoMAVLink_h
 
-#include "ardupilotmega/mavlink.h"
+#include "src/ardupilotmega/mavlink.h"
+#include <Arduino.h>
 #include <SoftwareSerial.h>
 
 class PixhawkArduinoMAVLink
@@ -19,7 +20,7 @@ class PixhawkArduinoMAVLink
   private:
     int _RX;
     int _TX;
-    SoftwareSerial _MAVSerial;
+    SoftwareSerial* _MAVSerial;
 };
 
 #endif
