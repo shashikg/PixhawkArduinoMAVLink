@@ -8,19 +8,29 @@
 #define PixhawkArduinoMAVLink_h
 
 #include "src/ardupilotmega/mavlink.h"
+#include <src/checksum.h>
+#include <src/mavlink_types.h>
+#include <src/protocol.h>
 #include <Arduino.h>
-#include <SoftwareSerial.h>
+#include <HardwareSerial.h>
 
 class PixhawkArduinoMAVLink
 {
   public:
-    PixhawkArduinoMAVLink(int RX_PIN, int TX_PIN);
+    PixhawkArduinoMAVLink(HardwareSerial &hs);
     bool begin();
     int ReadAcceleration(float *xacc, float *yacc, float *zacc);
+    bool Stream();
   private:
-    int _RX;
-    int _TX;
-    SoftwareSerial* _MAVSerial;
+    HardwareSerial* _MAVSerial;
+    double MILLIG_TO_MS2;
+    uint8_t system_id;
+    uint8_t component_id;
+    uint8_t type;
+    uint8_t autopilot;
+    uint8_t received_sysid; // Pixhawk sysid
+    uint8_t received_compid; // Pixhawk compid
+    int updateRate; // in milliseconds after which data should be recieved.
 };
 
 #endif
