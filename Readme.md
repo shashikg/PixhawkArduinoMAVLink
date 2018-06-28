@@ -17,3 +17,8 @@ After scrolling over the internet and finding very less usefull stuffs about how
 1. Find the **PixhawkArduinoMAVLink** library inside the libraries folder.
 1. Just copy paste it inside the "libraries" folder of your default arduino sketchbook directory.
 1. To use it follow this [Guide](guide.md)
+
+#License
+PixhawkArduinoMAVLink is licensed under the terms  of the MIT License. It uses C-language version of MAVLink header libraries which are inside ```libraries/src/``` directory generated using the mavlink generator which is also generated as MIT-licensed code.
+1. See the LICENSE file for this project.
+1. [LICENSE.txt](libraries/src/LICENSE.txt) file for the MIT License declaration by mavlink. See the mavlink's COPYING file for more information about license of MAVLink header files.
