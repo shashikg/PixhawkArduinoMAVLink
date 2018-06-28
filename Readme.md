@@ -1,6 +1,6 @@
 # MAVLINK for Arduino Pixhawk Communication
-After scrolling over the internet and finding very less usefull stuffs about how to retrieve datas from Pixhawk to Arduino Board. Moreover, most of them have some of their own problem! Well Juan Pedro's Article really helped a lot! but that too didn't worked for me, maybe due to the older version of mavlink library! So, I started about writing my own solution to this. Using mavlink to generate C libs. I had written a whole bunch of Arduino library to hide lots of processing scenes which are working behind the window! so as to provide easy access to the required sensor datas which the people want!
-**Created By:** Shashi Kant 
+After scrolling over the internet and finding very less usefull stuffs about how to retrieve datas from Pixhawk to Arduino Board. Moreover, most of them have some of their own problem! Well Juan Pedro's Article really helped a lot! but that too didn't worked for me, maybe due to the older version of mavlink library! So, I started about writing my own solution to this. Using mavlink to generate C libs, I had written a whole bunch of Arduino library to hide lots of processing scenes which are working behind the window! so as to provide easy access to the usefull data which is required in different projects!
+**Created By:** Shashi Kant
 **Date Started:** 23/06/2018
 **Sources:** See the Links Below (Huge thanks to their contributors!). Special thanks to [Juan Pedro](https://discuss.ardupilot.org/u/jplopezll/) for his excellent article on [MAVLink and Arduino](https://discuss.ardupilot.org/t/mavlink-and-arduino-step-by-step/25566)
 **Project Status:** Ongoing

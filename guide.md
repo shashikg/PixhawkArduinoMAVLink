@@ -13,10 +13,19 @@ Add the following header files to your arduino script:
 ```
 Define a ```HardwareSerial``` which is to be connected to Pixhawk see the exact connection for the Rpi on Pixhawk's website and replace Rpi with Arduino.
 ![Connection for Pixhawk 2](RaspberryPi_Pixhawk_wiring1.jpg)
-Create the PixhawkArduinoMAVLink object by using the following code ```PixhawkArduinoMAVLink mav(_RX, _TX);```
-to start using it call the function: ```mav.begin();``` After that use the respective function which you need. See below for the use of different function.
+Create the PixhawkArduinoMAVLink object by using the following code:
+```
+HardwareSerial &hs = Serial1;
+PixhawkArduinoMAVLink mav(hs);
+```
+to start using it call the function:
+```
+mav.begin(); // to start the serial
+mav.Stream(); // to initialise Pixhawk and send a req to stream data
+```
+After that use the respective function which you need. See below for the use of different function.
 
 # Reading Acceleration Data
-**Function:** ```int ReadAcceleration(float *xacc, float *yacc, float *zacc)```
-**Values to Pass:** 3 float address respectivly for xacc, yacc, zacc.
-**Return Values:** 0 for success, 1 for error in parsing data, and 2 for error in reading serial.
+Gives the actual acceleration values after compensating **g** from the imu acceleration data! Uses Quaternion Attitude and High Res IMU Data from Pixhawk. Simply call the function your acceleration datas will be saved in your passed variables.
+**Function:** ```void ReadAcceleration(float *xacc, float *yacc, float *zacc)```
+**Values to Pass:** 3 float address respectively for xacc, yacc, zacc.

@@ -1,5 +1,5 @@
 /*
-  PixhawkArduinoMAVLink.cpp - Library for using Arduino to recieve Pixhawk sensors data.
+  PixhawkArduinoMAVLink.cpp - Library for using Arduino to recieve Pixhawk's sensor data as well as some other usefull data which you might need.
   Created by Shashi Kant, June 23, 2018.
   Using MAVLink C headers files generated from the ardupilotmega.xml with the help of mavgenerator.
 */
