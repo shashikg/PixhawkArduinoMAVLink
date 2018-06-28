@@ -14,6 +14,6 @@ After scrolling over the internet and finding very less usefull stuffs about how
 
 # How to install this library?
 1. Git Clone this repo or download the zip version for it.
-1. Find the libraries folder inside it.
-1. Just rename it with "PixhawkArduinoMAVLink" and paste it inside the "libraries" folder of your default arduino sketchbook directory.
+1. Find the **PixhawkArduinoMAVLink** library inside the libraries folder.
+1. Just copy paste it inside the "libraries" folder of your default arduino sketchbook directory.
 1. To use it follow this [Guide](guide.md)
