@@ -19,8 +19,8 @@ class PixhawkArduinoMAVLink
   public:
     PixhawkArduinoMAVLink(HardwareSerial &hs);
     bool begin();
-    int ReadAcceleration(float *xacc, float *yacc, float *zacc);
-    bool Stream();
+    void ReadAcceleration(float *xacc, float *yacc, float *zacc);
+    void Stream();
   private:
     HardwareSerial* _MAVSerial;
     double MILLIG_TO_MS2;
@@ -30,7 +30,6 @@ class PixhawkArduinoMAVLink
     uint8_t autopilot;
     uint8_t received_sysid; // Pixhawk sysid
     uint8_t received_compid; // Pixhawk compid
-    int updateRate; // in milliseconds after which data should be recieved.
 };
 
 #endif

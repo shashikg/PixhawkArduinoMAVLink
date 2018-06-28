@@ -1,3 +1,4 @@
 PixhawkArduinoMAVLink KEYWORD1
 begin KEYWORD2
 ReadAcceleration KEYWORD2
+Stream KEYWORD2

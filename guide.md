@@ -6,8 +6,12 @@
 | 2 | Reading Acceleration Data | [Link](#Reading-Acceleration-Data) |
 
 # How to use this library?
-Add the following header file: ```#include <PixhawkArduinoMAVLink.h>```
-Define a RX, TX pins which is to be connected to Pixhawk see the exact connection for the Rpi on Pixhawk's website and replace Rpi with Arduino.
+Add the following header files to your arduino script:
+```
+#include <PixhawkArduinoMAVLink.h>
+#include <HardwareSerial.h>
+```
+Define a ```HardwareSerial``` which is to be connected to Pixhawk see the exact connection for the Rpi on Pixhawk's website and replace Rpi with Arduino.
 ![Connection for Pixhawk 2](RaspberryPi_Pixhawk_wiring1.jpg)
 Create the PixhawkArduinoMAVLink object by using the following code ```PixhawkArduinoMAVLink mav(_RX, _TX);```
 to start using it call the function: ```mav.begin();``` After that use the respective function which you need. See below for the use of different function.
