@@ -17,9 +17,8 @@ After scrolling over the internet and finding very less usefull stuffs about how
 1. [MAVLink Erle Robotics](http://erlerobot.github.io/erle_gitbook/en/mavlink/mavlink.html)
 
 # How to install this library?
-1. Git Clone this repo or download the zip version for it.
-1. Find the **PixhawkArduinoMAVLink** library inside the libraries folder.
-1. Just copy paste it inside the "libraries" folder of your default arduino sketchbook directory.
+1. Git Clone this repo or [download the zip version for it](https://github.com/shashikg/PixhawkArduinoMAVLink/archive/master.zip).
+1. (In the Arduino IDE) Sketch > Include Library > Add .ZIP Library > select the downloaded file > Open
 1. To use it follow this [Guide](guide.md)
 
 # License
