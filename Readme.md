@@ -7,7 +7,7 @@ After scrolling over the internet and finding very less usefull stuffs about how
 
 **Sources:** See the Links Below (Huge thanks to their contributors!). Special thanks to [Juan Pedro](https://discuss.ardupilot.org/u/jplopezll/) for his excellent article on [MAVLink and Arduino](https://discuss.ardupilot.org/t/mavlink-and-arduino-step-by-step/25566)
 
-**Project Status:** Ongoing
+**Project Status:** On Halt
 
 # Some Usefull Links:
 1. [MAVLink and Arduino: step by step](https://discuss.ardupilot.org/t/mavlink-and-arduino-step-by-step/25566)
