@@ -7,10 +7,10 @@
 #ifndef PixhawkArduinoMAVLink_h
 #define PixhawkArduinoMAVLink_h
 
-#include "src/ardupilotmega/mavlink.h"
-#include <src/checksum.h>
-#include <src/mavlink_types.h>
-#include <src/protocol.h>
+#include "ardupilotmega/mavlink.h"
+#include <checksum.h>
+#include <mavlink_types.h>
+#include <protocol.h>
 #include <Arduino.h>
 #include <HardwareSerial.h>
 
